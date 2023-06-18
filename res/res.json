@@ -1,0 +1,18 @@
+{
+    "School Captain": [
+        {
+            "name": "Hemant Vishal",
+            "icon": "/res/png/hemant.png"
+        },
+        {
+            "name": "2",
+            "icon": "/res/png/2.png"
+        }
+    ],
+    "Orange House Captain": [
+        {
+            "name": "Some Body",
+            "icon": "/res/png/somebody64.png"
+        }
+    ]
+}

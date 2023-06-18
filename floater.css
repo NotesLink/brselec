@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all .3s linear;
+    scrollbar-width: 0;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.top-bar {
+    height: 4em;
+    width: 100%;
+    background-color: #eee;
+    display: flex;
+    position: sticky;
+    top: 0;
+    overflow-y: scroll;
+}
+
+#search-box {
+    height: 4em;
+    padding: 1em;
+    width: 100%;
+    background-color: #eee;
+    display: flex;
+    position: sticky;
+    top: 5em;
+    overflow-y: scroll;
+    border: none;
+    border-radius: 1em;
+}
+
+.top-bar>img {
+    margin: .5em;
+    padding: 0;
+    height: 3em;
+    border-radius: .5em;
+}
+
+.top-bar>* {
+    margin: .5em;
+    border-radius: .5em;
+    border: none;
+    padding: .5em;
+}
+
+.top-bar>div {
+    line-height: 3em;
+    padding: 0;
+    font-weight: bold;
+}
+
+.web {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nitro-ui-alist {
+    padding: 2.5%;
+    width: 100%;
+    max-width: 120vmin;
+}
+
+.nitro-ui-alist>* {
+    width: 100%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    border: none;
+}
+
+.nitro-ui-alist>*>img {
+    width: 15%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 1em;
+    border: none;
+    padding: 1vmin;
+}
+
+.nitro-ui-alist>*>div {
+    width: 60%;
+    margin: 5%;
+    font-weight: bold;
+}
+
+.nitro-ui-alist>a>.arr {
+    width: 4%;
+    margin: 5%;
+    height: 4%;
+    padding: 0;
+}
+
+.nitro-ui-alist>h2 {
+    border: none;
+    background-color: #fff;
+}
+
+.yt-item {
+    border: .5vmin solid #f00;
+    box-shadow: .5vmin .5vmin .5vmin #f00;
+}
+
+.ig-item {
+    border: .5vmin solid #83b;
+    box-shadow: .5vmin .5vmin .5vmin #83b;
+}
+
+.tw-item {
+    border: .5vmin solid #0ae;
+    box-shadow: .5vmin .5vmin .5vmin #0ae;
+}
+
+.fb-item {
+    border: .5vmin solid #459;
+    box-shadow: .5vmin .5vmin .5vmin #459;
+}
+
+.dc-item {
+    border: .5vmin solid #56f;
+    box-shadow: .5vmin .5vmin .5vmin #56f;
+}
+
+.nitro-ui-alist>input {
+    display: none;
+}
+
+:checked+label {
+    background-color: #ccc;
+}
