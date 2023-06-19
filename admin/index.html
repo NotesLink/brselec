@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/floater.css">
+    <link rel="shortcut icon" href="/res/png/brs.png">
+    <script src="/admin/admin.js"></script>
+    <title>BRS Elections</title>
+</head>
+
+<body onload="showkeys()">
+    <div class="top-bar">
+        <img src="/res/png/brs.png">
+        <div>BRS Elections</div>
+    </div>
+    <div class="web">
+        <div class="nitro-ui-alist">
+            <a href="javascript:showkeys()">
+                <img class="arr" src="/res/png/arr.png">
+                <div>Refresh Key List</div>
+            </a>
+            <a href="javascript:dlkeys()">
+                <img class="arr" src="/res/png/arr.png">
+                <div>Download All Access Keys</div>
+            </a>
+            <a href="javascript:newkey()">
+                <img class="arr" src="/res/png/arr.png">
+                <div>Generate New Access Key(s)</div>
+            </a>
+            <a href="javascript:delkey()">
+                <img class="arr" src="/res/png/arr.png">
+                <div>Delete Access Key</div>
+            </a>
+            <a href="javascript:clearkeys()">
+                <img class="arr" src="/res/png/arr.png">
+                <div>Delete All Access Keys</div>
+            </a>
+        </div>
+        <div class="nitro-ui-alist" style="max-height: 80vmin; overflow-y: scroll;">
+            <div>
+                <div id="key-list" style="max-height: 70vmin; overflow-y: scroll;">
+                    <pre style="color: #888;">// No Data... :)</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

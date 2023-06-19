@@ -2,17 +2,17 @@
     "School Captain": [
         {
             "name": "Hemant Vishal",
-            "icon": "/res/png/hemant.png"
+            "icon": "/res/png/brs.png"
         },
         {
             "name": "2",
-            "icon": "/res/png/2.png"
+            "icon": "/res/png/brs.png"
         }
     ],
     "Orange House Captain": [
         {
             "name": "Some Body",
-            "icon": "/res/png/somebody64.png"
+            "icon": "/res/png/brs.png"
         }
     ]
 }
