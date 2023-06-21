@@ -175,12 +175,6 @@
             "icon": "/res/png/yellow/vice/sneha.jpeg"
         }
     ],
-    "Transport Captain": [
-        {
-            "name": "",
-            "icon": "/res/png/transport/captain/"
-        }
-    ],
     "Transport Vice Captain": [
         {
             "name": "Kripalini",
