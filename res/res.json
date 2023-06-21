@@ -11,6 +11,14 @@
         {
             "name": "Hemant Vishal",
             "icon": "/res/png/brs.png"
+        },
+        {
+            "name": "Mamata",
+            "icon": "/res/png/school/captain/mamata.png"
+        },
+        {
+            "name": "Rishita Gupta",
+            "icon": "/res/png/school/captain/rishita-gupta.png"
         }
     ],
     "School Vice Captain": [
@@ -29,7 +37,7 @@
     ],
     "Sports Captain": [
         {
-            "name":"Akhilesh B Arun",
+            "name": "Akhilesh B Arun",
             "icon": "/res/png/sports/captain/akhi.jpg"
         },
         {
@@ -55,6 +63,10 @@
         {
             "name": "Jhanvi",
             "icon": "/res/png/discipline/captain/jhanvi.png"
+        },
+        {
+            "name": "Ranjitha Reddy",
+            "icon": "/res/png/discipline/captain/ranjitha.jpeg"
         }
     ],
     "Cultural Captain": [
@@ -101,6 +113,10 @@
         {
             "name": "Rashad Hashim",
             "icon": "/res/png/blue/captain/rashad.jpeg"
+        },
+        {
+            "name": "Nitara Reddy",
+            "icon": "/res/png/blue/captain/nitara.jpeg"
         }
     ],
     "Blue House Vice Captain": [
@@ -137,6 +153,10 @@
         {
             "name": "Vaibhav Kumar",
             "icon": "/res/png/orange/captain/vebav.jpeg"
+        },
+        {
+            "name": "Indirani",
+            "icon": "/res/png/orange/captain/indirani.jpeg"
         }
     ],
     "Yellow House Captain": [
@@ -153,6 +173,18 @@
         {
             "name": "Sneha",
             "icon": "/res/png/yellow/vice/sneha.jpeg"
+        }
+    ],
+    "Transport Captain": [
+        {
+            "name": "",
+            "icon": "/res/png/transport/captain/"
+        }
+    ],
+    "Transport Vice Captain": [
+        {
+            "name": "Kripalini",
+            "icon": "/res/png/transport/vice/kripalini.jpeg"
         }
     ]
 }
