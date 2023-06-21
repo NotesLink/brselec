@@ -1,14 +1,96 @@
 {
     "School Captain": [
         {
+            "name": "Anusha Nehal",
+            "icon": "/res/png/school/captain/anusha-nehal.png"
+        },
+        {
+            "name": "Serena Arpudha Raj",
+            "icon": "/res/png/school/captain/serena.jpeg"
+        },
+        {
             "name": "Hemant Vishal",
             "icon": "/res/png/brs.png"
         }
     ],
-    "Orange House Captain": [
+    "School Vice Captain": [
         {
-            "name": "Some Body",
-            "icon": "/res/png/brs.png"
+            "name": "Delin Christian",
+            "icon": "/res/png/school/vice/delin.jpeg"
+        },
+        {
+            "name": "Kushi",
+            "icon": "/res/png/school/vice/kushi.jpeg"
+        },
+        {
+            "name": "Anusha Nehal",
+            "icon": "/res/png/school/vice/ayushmann.jpeg"
+        }
+    ],
+    "Discipline Captain": [
+        {
+            "name": "Daiwik Hittalmani",
+            "icon": "/res/png/discipline/captain/daiwik.png"
+        },
+        {
+            "name": "Jhanvi",
+            "icon": "/res/png/discipline/captain/jhanvi.png"
+        }
+    ],
+    "Cultural Captain": [
+        {
+            "name": "Gayathri",
+            "icon": "/res/png/cultural/captain/gayathri.jpeg"
+        },
+        {
+            "name": "Hansikha Chelluboina",
+            "icon": "/res/png/cultural/captain/hansikha.jpeg"
+        },
+        {
+            "name": "Pranavi Limna",
+            "icon": "/res/png/cultural/captain/pranavi.jpeg"
+        },
+        {
+            "name": "Spoorthy",
+            "icon": "/res/png/cultural/captain/spoorthy.jpeg"
+        }
+    ],
+    "Cultural Vice Captain":[
+        {
+            "name":"Eshan Mirza",
+            "icon":"/res/png/cultural/vice/eshan.png"
+        },
+        {
+            "name": "Manvitha",
+            "icon":"/res/png/cultural/vice/manvitha.jpeg"
+        },
+        {
+            "name": "Sravya G",
+            "icon": "/res/png/cultural/vice/sravya.jpeg"
+        },
+        {
+            "name": "Varshini",
+            "icon": "/res/png/cultural/vice/varshini.png"
+        }
+    ],
+    "Blue House Captain": [
+        {
+            "name": "Juan Elias Mathew",
+            "icon": "/res/png/blue/captain/juan.jpeg"
+        },
+        {
+            "name": "Rashad Hashim",
+            "icon": "/res/png/blue/captain/rashad.jpeg"
+        }
+    ],
+    "Blue House Vice Captain": [
+        {
+            "name": "Joel Jerry",
+            "icon": "/res/png/blue/vice/joel.jpeg"
+        },
+        {
+            "name": "Tulsi",
+            "icon": "/res/png/blue/vice/tulsi.jpeg"
         }
     ]
 }
