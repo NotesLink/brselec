@@ -27,6 +27,26 @@
             "icon": "/res/png/school/vice/ayushmann.jpeg"
         }
     ],
+    "Sports Captain": [
+        {
+            "name":"Akhilesh B Arun",
+            "icon": "/res/png/sports/captain/akhi.jpeg"
+        },
+        {
+            "name": "Kishan R Gowda",
+            "icon": "/res/png/sports/captain/jam.jpeg"
+        }
+    ],
+    "Sports Vice Captain": [
+        {
+            "name": "Shreesakthi",
+            "icon": "/res/png/sports/vice/shreesakthi.jpg"
+        },
+        {
+            "name": "Srujan",
+            "icon": "/res/png/blue/vice/srujan.jpeg"
+        }
+    ],
     "Discipline Captain": [
         {
             "name": "Daiwik Hittalmani",
@@ -55,14 +75,14 @@
             "icon": "/res/png/cultural/captain/spoorthy.jpeg"
         }
     ],
-    "Cultural Vice Captain":[
+    "Cultural Vice Captain": [
         {
-            "name":"Eshan Mirza",
-            "icon":"/res/png/cultural/vice/eshan.png"
+            "name": "Eshan Mirza",
+            "icon": "/res/png/cultural/vice/eshan.png"
         },
         {
             "name": "Manvitha",
-            "icon":"/res/png/cultural/vice/manvitha.jpeg"
+            "icon": "/res/png/cultural/vice/manvitha.jpeg"
         },
         {
             "name": "Sravya G",
@@ -91,6 +111,48 @@
         {
             "name": "Tulsi",
             "icon": "/res/png/blue/vice/tulsi.jpeg"
+        }
+    ],
+    "Green House Captain": [
+        {
+            "name": "Sheikh Suhana",
+            "icon": "/res/png/green/captain/suhana.jpeg"
+        }
+    ],
+    "Green House Vice Captain": [
+        {
+            "name": "Yukti",
+            "icon": "/res/png/green/vice/yukti.jpeg"
+        }
+    ],
+    "Orange House Captain": [
+        {
+            "name": "Dharan",
+            "icon": "/res/png/orange/captain/dharan.png"
+        },
+        {
+            "name": "Siddharth",
+            "icon": "/res/png/orange/captain/sidd.png"
+        },
+        {
+            "name": "Vaibhav Kumar",
+            "icon": "/res/png/orange/captain/vebav.jpeg"
+        }
+    ],
+    "Yellow House Captain": [
+        {
+            "name": "Jasmine GJ",
+            "icon": "/res/png/yellow/captain/jas.jpg"
+        }
+    ],
+    "Yellow House Vice Captain": [
+        {
+            "name": "Prakash",
+            "icon": "/res/png/yellow/vice/prakash.jpeg"
+        },
+        {
+            "name": "Sneha",
+            "icon": "/res/png/yellow/vice/sneha.jpeg"
         }
     ]
 }
