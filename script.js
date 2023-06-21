@@ -11,7 +11,7 @@ function genkey() {
 
 function loadForm() {
     let alist = document.getElementsByClassName("nitro-ui-alist")[0];
-    alert("Polling Guidelines");
+    alert("Polling Guidelines (\"OK\" to continue)");
     alert("[1 out of 5] Click on the box containing the name of your favourite participant to vote for them.");
     alert("[2 out of 5] Select one participant for each role. When you are done selecting the desired participants, recheck your responses and click the \"Submit Response\" button at the end of the page to submit your responses.");
     alert("[3 out of 5] Confirm that you want to submit the form by clicking \"OK\". Then, enter the provided passkey into the passkey prompt.");
@@ -74,7 +74,7 @@ function submit() {
                 body: JSON.stringify(obj)
             }).then((res) => {
                 if (res.ok) {
-                    alert("Response Submitted successfully!\n[Method: POST]");
+                    alert("Response Submitted successfully!\nClick \"OK\" ONLY if you have not yet voted.");
                     window.location.reload();
                 } else {
                     res.text().then((t) => {
