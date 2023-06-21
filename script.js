@@ -11,10 +11,13 @@ function genkey() {
 
 function loadForm() {
     let alist = document.getElementsByClassName("nitro-ui-alist")[0];
+    alert("Polling Guidelines");
+    alert("[1 out of 5] Click on the box containing the name of your favourite participant to vote for them.");
+    alert("[2 out of 5] Select one participant for each role.");
+    alert("[3 out of 5] When you are done selecting the desired participants, recheck your responses and click the \"Submit Response\" button at the end of the page to submit your response.");
+    alert("[4 out of 5] Confirm that you want to submit the form by clicking \"OK\". Then, enter the provided passkey into the passkey prompt. Wait patiently until you see a success message. If you made a mistake entering the passkey, you will see an error message. In that case, you just have to click submit again and repeat the same procedure.");
+    alert("[5 out of 5] If you face any problems, you may ask for help from the teachers.");
     fetch("/res/res.json").then((d) => {
-        let h2 = document.createElement("h2");
-        h2.innerHTML = "Select one option for each sub-heading:";
-        alist.appendChild(h2);
         d.json().then((j) => {
             json = j;
             Object.keys(j).forEach((a) => {
@@ -22,7 +25,6 @@ function loadForm() {
                 let br = document.createElement("br");
                 h.innerHTML = a;
                 alist.appendChild(h);
-                alist.appendChild(br);
                 j[a].forEach((p) => {
                     let key = genkey();
                     let inp = document.createElement("input");
@@ -41,6 +43,7 @@ function loadForm() {
                     lbl.appendChild(img);
                     lbl.appendChild(div);
                 });
+                alist.appendChild(br);
             });
             alist.innerHTML += `<h2>End</h2><a style="cursor: pointer;" onclick="submit()"><img src="/res/png/arr.png" class="arr"><div>Submit Response</div></a>`;
         });
