@@ -12,6 +12,9 @@ function genkey() {
 function loadForm() {
     let alist = document.getElementsByClassName("nitro-ui-alist")[0];
     fetch("/res/res.json").then((d) => {
+        let h2 = document.createElement("h2");
+        h2.innerHTML = "Select one option for each sub-heading:";
+        alist.appendChild(h2);
         d.json().then((j) => {
             json = j;
             Object.keys(j).forEach((a) => {
@@ -19,6 +22,7 @@ function loadForm() {
                 let br = document.createElement("br");
                 h.innerHTML = a;
                 alist.appendChild(h);
+                alist.appendChild(br);
                 j[a].forEach((p) => {
                     let key = genkey();
                     let inp = document.createElement("input");
@@ -37,7 +41,6 @@ function loadForm() {
                     lbl.appendChild(img);
                     lbl.appendChild(div);
                 });
-                alist.appendChild(br);
             });
             alist.innerHTML += `<h2>End</h2><a style="cursor: pointer;" onclick="submit()"><img src="/res/png/arr.png" class="arr"><div>Submit Response</div></a>`;
         });
