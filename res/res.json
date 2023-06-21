@@ -44,7 +44,7 @@
         },
         {
             "name": "Srujan",
-            "icon": "/res/png/blue/vice/srujan.jpeg"
+            "icon": "/res/png/sports/vice/srujan.jpeg"
         }
     ],
     "Discipline Captain": [
@@ -60,7 +60,7 @@
     "Cultural Captain": [
         {
             "name": "Gayathri",
-            "icon": "/res/png/cultural/captain/gayathri.jpeg"
+            "icon": "/res/png/cultural/captain/gayathri.jpg"
         },
         {
             "name": "Hansikha Chelluboina",
@@ -72,7 +72,7 @@
         },
         {
             "name": "Spoorthy",
-            "icon": "/res/png/cultural/captain/spoorthy.jpeg"
+            "icon": "/res/png/cultural/captain/spoorthy.jpg"
         }
     ],
     "Cultural Vice Captain": [
@@ -90,7 +90,7 @@
         },
         {
             "name": "Varshini",
-            "icon": "/res/png/cultural/vice/varshini.png"
+            "icon": "/res/png/cultural/vice/varshini.jpeg"
         }
     ],
     "Blue House Captain": [
