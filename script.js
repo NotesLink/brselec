@@ -81,4 +81,6 @@ function submit() {
     }
 }
 
-loadForm("/res/res.json");
+document.addEventListener("DOMContentLoaded", () => {
+    loadForm("/res/res.json");
+});
