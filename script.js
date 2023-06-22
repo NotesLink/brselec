@@ -82,7 +82,7 @@ function submit() {
 }
 
 housetest = (arg) => {
-    if (arr.includes(arg.toLowerCase())) {
+    if (["blue", "green", "orange", "yellow"].includes(arg.toLowerCase())) {
         loadForm(`/res/${arg}.json`);
         return true;
     } else {
@@ -92,7 +92,6 @@ housetest = (arg) => {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    let arr = ["blue", "green", "orange", "yellow"];
     loadForm("/res/res.json");
     do {
         window.house = prompt("Please enter your house:\n\nyellow or orange or blue or green");
