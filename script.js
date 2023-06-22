@@ -13,8 +13,8 @@ function loadForm(url) {
     let alist = document.getElementsByClassName("nitro-ui-alist")[0];
     fetch(url).then((d) => {
         d.json().then((j) => {
-            json = j;
             Object.keys(j).forEach((a) => {
+                json[a] = j[a];
                 let h = document.createElement("h2");
                 let br = document.createElement("br");
                 h.innerHTML = a;
@@ -82,5 +82,17 @@ function submit() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    let arr = ["blue", "green", "orange", "yellow"];
     loadForm("/res/res.json");
+    do {
+        window.house = prompt("Please enter your house:\n\nyellow or orange or blue or green");
+    } while (() => {
+        if (arr.includes(house.toLowerCase())) {
+            loadForm(`/res/${house}.json`);
+            return true;
+        } else {
+            alert("Enter Valid House");
+            return false;
+        }
+    });
 });
