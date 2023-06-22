@@ -11,13 +11,24 @@
     <title>BRS Elections</title>
 </head>
 
-<body onload="loadForm()">
+<body onload="loadForm(/res/res.json)">
     <div class="top-bar">
         <img src="/res/png/brs.png">
         <div>BRS Elections</div>
     </div>
     <div class="web">
         <div class="nitro-ui-alist">
+            <select onchange="loadForm(`/res/${this.value}.json`)">
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+            </select>
+            <h2>Submission</h2>
+            <a style="cursor: pointer;" onclick="submit()">
+                <img src="/res/png/arr.png" class="arr">
+                <div>Submit Response</div>
+            </a>
         </div>
     </div>
 </body>

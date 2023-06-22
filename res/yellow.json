@@ -1,0 +1,18 @@
+{
+    "Yellow House Captain": [
+        {
+            "name": "Jasmine GJ",
+            "icon": "/res/png/yellow/captain/jas.jpg"
+        }
+    ],
+    "Yellow House Vice Captain": [
+        {
+            "name": "Prakash",
+            "icon": "/res/png/yellow/vice/prakash.jpeg"
+        },
+        {
+            "name": "Sneha",
+            "icon": "/res/png/yellow/vice/sneha.jpeg"
+        }
+    ]
+}

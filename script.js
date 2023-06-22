@@ -9,15 +9,9 @@ function genkey() {
         )).toString(32);
 }
 
-function loadForm() {
+function loadForm(url) {
     let alist = document.getElementsByClassName("nitro-ui-alist")[0];
-    alert("Polling Guidelines (\"OK\" to continue)");
-    alert("[1 out of 5] Click on the box containing the name of your favourite participant to vote for them.");
-    alert("[2 out of 5] Select one participant for each role. When you are done selecting the desired participants, recheck your responses and click the \"Submit Response\" button at the end of the page to submit your responses.");
-    alert("[3 out of 5] Confirm that you want to submit the form by clicking \"OK\". Then, enter the provided passkey into the passkey prompt.");
-    alert("[4 out of 5] Wait patiently until you see a success message. If you made a mistake entering the passkey, you will see an error message. In that case, you just have to click submit again and repeat the same procedure with the right paskey.");
-    alert("[5 out of 5] Choose carefully because you will have only one vote. If you face any problems, you may ask for help from the teachers.");
-    fetch("/res/res.json").then((d) => {
+    fetch(url).then((d) => {
         d.json().then((j) => {
             json = j;
             Object.keys(j).forEach((a) => {
@@ -45,7 +39,6 @@ function loadForm() {
                 });
                 alist.appendChild(br);
             });
-            alist.innerHTML += `<h2>End</h2><a style="cursor: pointer;" onclick="submit()"><img src="/res/png/arr.png" class="arr"><div>Submit Response</div></a>`;
         });
     });
 }
