@@ -81,18 +81,20 @@ function submit() {
     }
 }
 
+housetest = (arg) => {
+    if (arr.includes(arg.toLowerCase())) {
+        loadForm(`/res/${arg}.json`);
+        return true;
+    } else {
+        alert("Enter Valid House");
+        return false;
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     let arr = ["blue", "green", "orange", "yellow"];
     loadForm("/res/res.json");
     do {
         window.house = prompt("Please enter your house:\n\nyellow or orange or blue or green");
-    } while (() => {
-        if (arr.includes(house.toLowerCase())) {
-            loadForm(`/res/${house}.json`);
-            return true;
-        } else {
-            alert("Enter Valid House");
-            return false;
-        }
-    });
+    } while (housetest());
 });
