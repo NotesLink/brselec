@@ -80,3 +80,5 @@ function submit() {
         }
     }
 }
+
+loadForm("/res/res.json");

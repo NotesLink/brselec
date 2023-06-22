@@ -11,14 +11,16 @@
     <title>BRS Elections</title>
 </head>
 
-<body onload="loadForm('/res/res.json')">
+<body>
     <div class="top-bar">
         <img src="/res/png/brs.png">
         <div>BRS Elections</div>
     </div>
     <div class="web">
         <div class="nitro-ui-alist">
+            <h2>Select your house</h2>
             <select onchange="loadForm(`/res/${this.value}.json`)">
+                <option value="null" selected disabled hidden>Select Your House</option>
                 <option value="blue">Blue</option>
                 <option value="green">Green</option>
                 <option value="orange">Orange</option>
