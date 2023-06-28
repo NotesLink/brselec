@@ -1,5 +1,5 @@
 const apiURL = "https://brselecapi.onrender.com";
-let json;
+let json = {};
 
 function genkey() {
     return Math.floor(
@@ -11,15 +11,31 @@ function genkey() {
 
 function loadForm(url) {
     let alist = document.getElementsByClassName("nitro-ui-alist")[0];
-    fetch(url).then((d) => {
+    fetch(url).then(async (d) => {
         d.json().then((j) => {
-            Object.keys(j).forEach((a) => {
-                json[a] = j[a];
+            let tmp = {};
+            j.forEach((a) => {
+                if (!(json[a.post] && tmp[a.post])) {
+                    json[a.post] = [];
+                    tmp[a.post] = [];
+                }
+                json[a.post].push({
+                    name: a.name,
+                    icon: a.icon
+                });
+                tmp[a.post].push({
+                    name: a.name,
+                    icon: a.icon
+                });
+            });
+            return tmp;
+        }).then((x) => {
+            Object.keys(x).forEach((a) => {
                 let h = document.createElement("h2");
                 let br = document.createElement("br");
                 h.innerHTML = a;
                 alist.appendChild(h);
-                j[a].forEach((p) => {
+                x[a].forEach((p) => {
                     let key = genkey();
                     let inp = document.createElement("input");
                     let lbl = document.createElement("label");
@@ -40,6 +56,8 @@ function loadForm(url) {
                 alist.appendChild(br);
             });
         });
+    }).catch((err) => {
+        alert(err);
     });
 }
 
@@ -70,7 +88,7 @@ function submit() {
                     alert("Response Submitted successfully!\nClick \"OK\" ONLY if you have not yet voted.");
                     window.location.reload();
                 } else {
-                    res.text().then((t) => {
+                    res.tejsont().then((t) => {
                         alert(`Error ${res.status} ${t}`);
                     });
                 }
@@ -81,19 +99,17 @@ function submit() {
     }
 }
 
-housetest = (arg) => {
-    if (["blue", "green", "orange", "yellow"].includes(arg.toLowerCase())) {
-        loadForm(`/res/${arg}.json`);
-        return true;
-    } else {
-        alert("Enter Valid House");
-        return false;
-    }
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-    loadForm("/res/res.json");
+    loadForm(`${apiURL}/res/common`); // fetch("api/res/:house")
     do {
         window.house = prompt("Please enter your house:\n\nyellow or orange or blue or green");
-    } while (housetest());
+    } while (((arg) => {
+        if (["blue", "green", "orange", "yellow"].includes(arg.toLowerCase())) {
+            loadForm(`${apiURL}/res/${arg}`);
+            return false;
+        } else {
+            alert("Enter Valid House");
+            return true;
+        }
+    })(house));
 });

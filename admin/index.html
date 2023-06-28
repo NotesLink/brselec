@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/floater.css">
+    <link rel="stylesheet" href="/admin/floater-admin.css">
     <link rel="shortcut icon" href="/res/png/brs.png">
     <script src="/admin/admin.js"></script>
-    <title>BRS Elections</title>
+    <title>BRS Elections | Admin Panel</title>
 </head>
 
-<body onload="showkeys()">
+<body>
     <div class="top-bar">
         <img src="/res/png/brs.png">
-        <div>BRS Elections</div>
+        <div>&#x2699; BRS Elections | Admin Panel</div>
     </div>
     <div class="web">
         <div class="nitro-ui-alist">
@@ -38,13 +38,31 @@
                 <img class="arr" src="/res/png/arr.png">
                 <div>Delete All Access Keys</div>
             </a>
+            <a href="javascript:clearvotes()">
+                <img class="arr" src="/res/png/arr.png">
+                <div>Clear Votes Database</div>
+            </a>
         </div>
         <div class="nitro-ui-alist" style="max-height: 80vmin; overflow-y: scroll;">
             <div>
                 <div id="key-list" style="max-height: 70vmin; overflow-y: scroll;">
-                    <pre style="color: #888;">// No Data... :)</pre>
+                    // Click "Refresh Key List" to view all keys... :)
                 </div>
             </div>
+        </div>
+        <div class="nitro-ui-alist">
+            <input type="file" id="lolxd" single accept="image/*" class="visually-hidden" onchange="resprompt('file')">
+            <a href="javascript:document.getElementById('lolxd').click()">
+                <img class="arr" src="/res/png/arr.png">
+                <div>Add Participant [icon from file]</div>
+            </a>
+            <a href="javascript:resprompt('link')">
+                <img class="arr" src="/res/png/arr.png">
+                <div>Add Participant [icon from url]</div>
+            </a>
+        </div>
+        <div class="nitro-ui-alist" style="max-height: 80vmin; overflow-y: scroll;" id="cmn3">
+            Loading...
         </div>
     </div>
 </body>
