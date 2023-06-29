@@ -101,16 +101,37 @@ function clearvotes() {
     }
 }
 
-function resadd(obj) {
-    console.log(obj);
+function resadd(x) {
+    fetch(`${apiURL}/resadd/${prompt("Enter passkey:")}`, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(x)
+    }).then((res) => {
+        if (res.ok) {
+            alert("Added successfully.");
+        } else {
+            res.text().then((o) => {
+                alert(o);
+            });
+        }
+        list_res();
+        return null;
+    }).catch((err) => {
+        alert(err);
+    });
 }
 
 function resprompt(opt) {
     let obj = {};
-    obj.name = prompt("Enter participant name:");
+    obj.name = prompt("Enter participant name:").toLowerCase().replace(/^[a-zA-Z]|( [a-zA-Z])/g, (letter) => { return letter.toUpperCase() });
     if (!obj.name) { return; }
-    obj.post = prompt("Enter participant post:");
+    obj.post = prompt("Enter participant post:").toLowerCase().replace(/^[a-zA-Z]|( [a-zA-Z])/g, (letter) => { return letter.toUpperCase() });
     if (!obj.post) { return; }
+    obj.house = prompt("Enter participant house setting:\n(for house-wise restrictions)\ncommon(for common roles) or house names(for house captains and vice captains)", "common").toLowerCase();
+    if (!obj.house) { return; }
     switch (opt) {
         case "link":
             obj.icon = prompt("Enter image url:");
@@ -140,7 +161,7 @@ function resdel(x) {
         body: JSON.stringify(x)
     }).then((res) => {
         if (res.ok) {
-            alert("Deleted successfully.")
+            alert("Deleted successfully.");
         } else {
             res.text().then((o) => {
                 alert(o);
@@ -150,7 +171,7 @@ function resdel(x) {
         return null;
     }).catch((err) => {
         alert(err);
-    })
+    });
 }
 
 function list_res() {

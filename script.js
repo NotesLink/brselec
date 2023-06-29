@@ -10,7 +10,8 @@ function genkey() {
 }
 
 function loadForm(url) {
-    let alist = document.getElementsByClassName("nitro-ui-alist")[0];
+    let alink = document.getElementById('submit-h');
+    let alist = alink.parentNode;
     fetch(url).then(async (d) => {
         d.json().then((j) => {
             let tmp = {};
@@ -34,7 +35,7 @@ function loadForm(url) {
                 let h = document.createElement("h2");
                 let br = document.createElement("br");
                 h.innerHTML = a;
-                alist.appendChild(h);
+                alist.insertBefore(h, alink);
                 x[a].forEach((p) => {
                     let key = genkey();
                     let inp = document.createElement("input");
@@ -48,12 +49,12 @@ function loadForm(url) {
                     lbl.setAttribute("for", key);
                     img.setAttribute("src", p.icon);
                     div.innerHTML = p.name;
-                    alist.appendChild(inp);
-                    alist.appendChild(lbl);
+                    alist.insertBefore(inp, alink);
+                    alist.insertBefore(lbl, alink);
                     lbl.appendChild(img);
                     lbl.appendChild(div);
                 });
-                alist.appendChild(br);
+                alist.insertBefore(br, alink);
             });
         });
     }).catch((err) => {
